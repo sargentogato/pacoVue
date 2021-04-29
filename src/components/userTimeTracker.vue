@@ -32,7 +32,9 @@
           Salir
         </button>
       </div>
-
+      <svg id="chart" width="3" height="40">
+        <line x1="20" y1="20" x2="20" y2="130"></line>
+      </svg>
       <div class="timeBox__profile flex justify-between items-center p-4">
         <div class="timeBox__profile-img">
           <img src="../assets/profile.png" alt="" />
@@ -126,7 +128,7 @@ a {
 .timeBox {
   flex-basis: 100%;
   gap: 1rem;
-  background-color: rgb(190, 190, 190);
+  background-color: hsl(0, 0%, 85%);
   border-radius: 50px;
 }
 
@@ -161,6 +163,14 @@ button:nth-child(4) {
   color: white;
   font-size: 1.2vw;
   font-weight: 700;
+}
+
+svg#chart {
+  background: rgb(165, 165, 165);
+}
+
+#chart line {
+  stroke-width: 1;
 }
 
 .timeBox__profile-img {
@@ -207,11 +217,5 @@ nav .menu-item {
   width: 100%;
   height: 1px;
   background-color: rgb(241, 241, 241);
-}
-
-nav .menu-item.active,
-nav .menu-item:hover {
-  color: rgb(86, 192, 0);
-  border-bottom-color: yellowgreen;
 }
 </style>
