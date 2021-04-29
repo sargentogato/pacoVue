@@ -40,13 +40,7 @@
           <img src="../assets/profile.png" alt="" />
         </div>
         <h2 class="timeBox__profile-name">Marlon Velásquez</h2>
-        <nav>
-          <drop-down
-            :itemsMenu="services"
-            :time="currentTime"
-            :users="workers"
-          />
-        </nav>
+        <drop-down :itemsMenu="services" :time="currentTime" :users="workers" />
       </div>
     </div>
   </div>
@@ -191,14 +185,14 @@ img {
   height: auto;
 }
 
-nav {
+/* nav {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
+} */
 
-nav .menu-item {
+/* nav .menu-item {
   width: 100%;
   color: rgb(0, 0, 0);
   position: relative;
@@ -217,5 +211,5 @@ nav .menu-item {
   width: 100%;
   height: 1px;
   background-color: rgb(241, 241, 241);
-}
+} */
 </style>
