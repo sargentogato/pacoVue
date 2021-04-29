@@ -19,7 +19,30 @@
     </svg>
     <transition name="fade" appear>
       <div class="sub-menu" v-if="isOpen">
-        <a class="itemLink myAcount" href="">Mis Cuentas</a>
+        <a class="itemLink myAcount" href=""
+          ><span>
+            <svg
+              xmlns:svg="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              id="Capa_1"
+              x="0px"
+              y="0px"
+              width="20px"
+              height="20px"
+              viewBox="0 0 512.002 512.002"
+              enable-background="new 0 0 960 560"
+              xml:space="preserve"
+            >
+              <path
+                d="M 388.425,241.951 151.609,5.79 c -7.759,-7.733 -20.321,-7.72 -28.067,0.04 -7.74,7.759 -7.72,20.328 0.04,28.067 l 222.72,222.105 -222.728,222.104 c -7.759,7.74 -7.779,20.301 -0.04,28.061 3.883,3.89 8.97,5.835 14.057,5.835 5.074,0 10.141,-1.932 14.017,-5.795 L 388.425,270.052 c 3.737,-3.718 5.834,-8.778 5.834,-14.05 0,-5.272 -2.103,-10.326 -5.834,-14.051 z"
+                id="path2"
+                inkscape:connector-curvature="0"
+              />
+            </svg>
+          </span>
+          Mis Cuentas</a
+        >
         <div v-for="worker of users" :key="worker" class="toolTip">
           <h3>{{ worker }}</h3>
           <p>
@@ -48,21 +71,14 @@ export default {
 
 <style>
 .menu-item {
-  /* width: 100%; */
   position: relative;
   text-align: center;
 }
-
-/* .menu-item {
-  display: flex;
-  align-items: center;
-} */
 
 .itemLink {
   padding: 20px 20px;
   display: block;
   width: 100%;
-  /* padding: 1rem 1rem; */
   border-bottom: 1px solid hsl(0, 0%, 85%);
   color: rgb(0, 0, 0);
 }
@@ -114,5 +130,15 @@ export default {
 .myAcount:hover,
 .itemLink:hover {
   color: rgb(86, 192, 0);
+}
+
+span {
+  position: absolute;
+  right: 1rem;
+  left: 0.5rem;
+}
+
+span > svg {
+  transform: rotate(180deg);
 }
 </style>
