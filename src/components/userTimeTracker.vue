@@ -66,7 +66,7 @@ export default {
         { title: "Mi perfil", link: "#" },
         { title: "Cerrar sesión", link: "#" },
       ],
-      workers: ["Marlon"],
+      workers: ["Marlon Velásquez"],
     };
   },
   methods: {
@@ -184,32 +184,4 @@ img {
   width: 100%;
   height: auto;
 }
-
-/* nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} */
-
-/* nav .menu-item {
-  width: 100%;
-  color: rgb(0, 0, 0);
-  position: relative;
-  text-align: center;
-}
-
-.menu-item a {
-  padding: 10px 20px;
-  display: block;
-  width: 100%;
-}
-
-.menu-item a::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: rgb(241, 241, 241);
-} */
 </style>
