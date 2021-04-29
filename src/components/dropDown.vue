@@ -20,10 +20,13 @@
     <transition name="fade" appear>
       <div class="sub-menu" v-if="isOpen">
         <a class="myAcount" href="">Mis Cuentas</a>
-        <div class="toolTip">
-          <p>{{ time.hour }}:{{ time.minutes }}:{{ time.seconds }}</p>
+        <div v-for="worker of users" :key="worker" class="toolTip">
+          <h3>{{ worker }}</h3>
+          <p>
+            Hoy llevas: {{ time.hours }}:{{ time.minutes }}:{{ time.seconds }}
+          </p>
         </div>
-        <div v-for="(item, i) in items" :key="i" class="menu-item">
+        <div v-for="(item, i) in itemsMenu" :key="i" class="menu-item">
           <a class="itemLink" href="#">{{ item.title }}</a>
         </div>
       </div>
@@ -34,7 +37,7 @@
 <script>
 export default {
   name: "dropdown",
-  props: ["items", "time"],
+  props: ["itemsMenu", "time", "users"],
   data() {
     return {
       isOpen: false,
@@ -45,8 +48,6 @@ export default {
 
 <style>
 .sub-menu {
-  -webkit-box-shadow: 0px 1px 10px 1px rgba(150, 150, 150, 1);
-  -moz-box-shadow: 0px 1px 10px 1px rgba(150, 150, 150, 1);
   box-shadow: 0px 1px 10px 1px rgba(150, 150, 150, 1);
 }
 
@@ -79,8 +80,8 @@ export default {
   position: absolute;
   background-color: inherit;
   box-shadow: inherit;
-  border-radius: 15px;
-  top: 5px;
+  border-radius: inherit;
+  top: 0;
   width: 25rem;
   padding: 0.5rem 0;
   transform: translateX(-101%);
