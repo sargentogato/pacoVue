@@ -38,7 +38,13 @@
           <img src="../assets/profile.png" alt="" />
         </div>
         <h2 class="timeBox__profile-name">Marlon Velásquez</h2>
-        <nav><drop-down :items="services" :time="currentTime" /></nav>
+        <nav>
+          <drop-down
+            :itemsMenu="services"
+            :time="currentTime"
+            :users="workers"
+          />
+        </nav>
       </div>
     </div>
   </div>
@@ -64,6 +70,7 @@ export default {
         { title: "Mi perfil", link: "#" },
         { title: "Cerrar sesión", link: "#" },
       ],
+      workers: ["Marlon"],
     };
   },
   methods: {
@@ -119,7 +126,7 @@ a {
 .timeBox {
   flex-basis: 100%;
   gap: 1rem;
-  background-color: yellow;
+  background-color: rgb(190, 190, 190);
   border-radius: 50px;
 }
 
