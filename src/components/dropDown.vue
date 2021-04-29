@@ -19,7 +19,7 @@
     </svg>
     <transition name="fade" appear>
       <div class="sub-menu" v-if="isOpen">
-        <a class="myAcount" href="">Mis Cuentas</a>
+        <a class="itemLink myAcount" href="">Mis Cuentas</a>
         <div v-for="worker of users" :key="worker" class="toolTip">
           <h3>{{ worker }}</h3>
           <p>
@@ -47,11 +47,35 @@ export default {
 </script>
 
 <style>
+.menu-item {
+  /* width: 100%; */
+  position: relative;
+  text-align: center;
+}
+
+/* .menu-item {
+  display: flex;
+  align-items: center;
+} */
+
+.itemLink {
+  padding: 20px 20px;
+  display: block;
+  width: 100%;
+  /* padding: 1rem 1rem; */
+  border-bottom: 1px solid hsl(0, 0%, 85%);
+  color: rgb(0, 0, 0);
+}
+
+.sub-menu *:last-child *:last-child {
+  border-bottom: unset;
+}
+
 .sub-menu {
   box-shadow: 0px 1px 10px 1px rgba(150, 150, 150, 1);
 }
 
-.menu-item .sub-menu {
+.sub-menu {
   position: absolute;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
