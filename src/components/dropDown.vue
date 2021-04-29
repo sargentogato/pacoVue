@@ -86,4 +86,9 @@ export default {
   padding: 0.5rem 0;
   transform: translateX(-101%);
 }
+
+.myAcount:hover,
+.itemLink:hover {
+  color: rgb(86, 192, 0);
+}
 </style>
