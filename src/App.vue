@@ -14,6 +14,11 @@ export default {
 </script>
 
 <style>
+#app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .container > div {
   flex-basis: 50%;
 }
