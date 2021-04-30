@@ -1,5 +1,5 @@
 <template>
-  <div class="mainTimeBox flex justify-center mt-8 w-4/5 pt-4 pb-4 bg-gray-200">
+  <div class="mainTimeBox flex justify-center mt-8 pt-4 pb-4 bg-gray-200">
     <div class="timeBox flex justify-between items-center pax-4">
       <div class="timeBox__timeBtn flex justify-between items-center p-4">
         <div class="timeBox__timeBtn-currentTime">
@@ -120,7 +120,6 @@ a {
 }
 
 .timeBox {
-  flex-basis: 100%;
   gap: 1rem;
   background-color: hsl(0, 0%, 85%);
   border-radius: 50px;
@@ -128,21 +127,18 @@ a {
 
 .timeBox__timeBtn,
 .timeBox__profile {
-  flex-basis: 100%;
   gap: 1.5rem;
 }
 
 .timeBox__timeBtn-currentTime {
   font-size: 3vh;
   text-align: center;
-  flex-basis: 1;
-  flex-grow: 1;
-  flex-shrink: 1;
 }
 
 button {
   flex: 1 1 0;
   border: none;
+  padding: 0.5rem 3rem;
 }
 
 button:nth-child(4) {
@@ -150,9 +146,6 @@ button:nth-child(4) {
 }
 
 .timeBox__timeBtn-getIn {
-  flex-basis: 1;
-  flex-grow: 4;
-  flex-shrink: 1;
   background-color: #5ebea3;
   color: white;
   font-size: 1.2vw;
@@ -173,9 +166,6 @@ svg#chart {
 }
 
 .timeBox__profile-name {
-  flex-basis: 1;
-  flex-grow: 3;
-  flex-shrink: 1;
   font-size: 1.2vw;
   text-align: center;
 }
