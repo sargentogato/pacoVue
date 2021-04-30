@@ -19,7 +19,4 @@ export default {
   display: flex;
   justify-content: center;
 }
-.container > div {
-  flex-basis: 50%;
-}
 </style>
