@@ -7,7 +7,13 @@
             this.displaySeconds
           }}
         </div>
-        <button
+        <btn-component
+          textBtn="Entrar"
+          @click="isActive(), startTimer()"
+          v-show="this.active"
+          >Entrar</btn-component
+        >
+        <!-- <button
           @click="
             isActive();
             startTimer();
@@ -16,7 +22,7 @@
           class="timeBox__timeBtn-getIn focus:outline-none text-sm py-2 rounded-full border border-green-600 hover:text-gray-900 hover:bg-green-50"
         >
           Entrar
-        </button>
+        </button> -->
         <button
           @click="pauseTimer()"
           v-show="this.inactive"
@@ -48,9 +54,10 @@
 
 <script>
 import dropDown from "./dropDown.vue";
+import btnComponent from "./button.vue";
 export default {
   name: "userTimeTracker",
-  components: { dropDown },
+  components: { dropDown, btnComponent },
   data() {
     return {
       active: true,
